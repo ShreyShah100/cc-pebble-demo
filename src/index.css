@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family:  "Quicksand";
+  }
+}
+
+:root {
+  font-family: "Quicksand", sans-serif!important;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #F6F7FC;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand"!important;
+}
+
+.custom-select .ant-select-selector {
+  border: none!important;
+}
+
+.ant-checkbox {
+  width: 20px!important;
+  height: 20px!important;
+}
+
+.ant-checkbox-inner {
+  width: 20px!important;
+  height: 20px!important;
+  border-color: #06FEF1 !important;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  border-color: #06FEF1 !important;
+  background-color: #06FEF1 !important;
+}
+
+/* width */
+.fixed-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+.fixed-box::-webkit-scrollbar-track {
+  background: #363A4F0D;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+/* Handle */
+.fixed-box::-webkit-scrollbar-thumb {
+  background: #001489;
+  border-radius: 4px;
+  width: 10px;
+}
+
+/* Handle on hover */
+.fixed-box::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
