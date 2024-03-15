@@ -21,6 +21,7 @@ function CarbonOffset (){
                 </div> 
                 <div className="flex">
                <table>
+                 
                 <tbody>
                     <tr>
                         <td><Typography.Title  className=" w-[175px] font-['Quicksand']  !text-[#001489] !text-[14px] !mt-0 !mb-0">Scheme Name</Typography.Title></td>
