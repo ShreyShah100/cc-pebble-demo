@@ -1,62 +1,62 @@
-import { Layout, Select, Typography, InputNumber, Input, Checkbox } from "antd";
+import { Layout, Select, Typography, InputNumber, Input } from "antd";
 import React, { ChangeEvent, Dispatch, SetStateAction } from "react";
 import DropdownIcon from "../assets/dropdown.svg";
 import AddIcon from "../assets/Add.svg";
 
-const CustomForm = (props: CustomFormProps) => {
+const CustomFormEmployee = (props: CustomFormEmployeeProps) => {
     const { 
-        carPetrol, 
-        setCarPetrol, 
-        carDiesel, 
-        setCarDiesel,
-        carAverage,
-        setCarAverage,
-        carHybrid,
-        setCarHybrid,
+        carPetrolEmployee, 
+        setCarPetrolEmployee, 
+        carDieselEmployee, 
+        setCarDieselEmployee,
+        carAverageEmployee,
+        setCarAverageEmployee,
+        carHybridEmployee,
+        setCarHybridEmployee,
         
      
     } = props;
-    const [petrolInputData, setPetrolInputData] = React.useState<MasterInputInformation>({
+    const [petrolEmployeeInputData, setPetrolEmployeeInputData] = React.useState<MasterInputInformationEmployee>({
         type: null,
         num1: null,
         unit: null,
         num2: null,
         driver: "",
         registrationNumber: "",
-        checked: false,
+      
        
     });
 
-    const [dieselInputData, setDieselInputData] = React.useState<MasterInputInformation>({
+    const [dieselEmployeeInputData, setDieselEmployeeInputData] = React.useState<MasterInputInformationEmployee>({
         type: null,
         num1: null,
         unit: null,
         num2: null,
         driver: "",
         registrationNumber: "",
-        checked: false,
+       
       
     });
 
-    const [averageInputData, setAverageInputData] = React.useState<MasterInputInformation>({
+    const [averageEmployeeInputData, setAverageEmployeeInputData] = React.useState<MasterInputInformationEmployee>({
         type: null,
         num1: null,
         unit: null,
         num2: null,
         driver: "",
         registrationNumber: "",
-        checked: false,
+      
        
     });
 
-    const [hybridInputData, setHybridInputData] = React.useState<MasterInputInformation>({
+    const [hybridEmployeeInputData, setHybridEmployeeInputData] = React.useState<MasterInputInformationEmployee>({
         type: null,
         num1: null,
         unit: null,
         num2: null,
         driver: "",
         registrationNumber: "",
-        checked: false,
+       
       
     });
   
@@ -69,10 +69,10 @@ const CustomForm = (props: CustomFormProps) => {
                     <div className="flex flex-row">
                         <Select
                             style={{ width: 120 }}
-                            onChange={(value) => setPetrolInputData({ ...petrolInputData, ...{ type: value } })}
+                            onChange={(value) => setPetrolEmployeeInputData({ ...petrolEmployeeInputData, ...{ type: value } })}
                             suffixIcon={null}
                             placeholder={"Car Type"}
-                            value={petrolInputData.type}
+                            value={petrolEmployeeInputData.type}
                             options={[
                                 { value: 'small-car', label: 'Small Car' },
                                 { value: 'medium-car', label: 'Medium Car' },
@@ -85,14 +85,14 @@ const CustomForm = (props: CustomFormProps) => {
                             <img src={DropdownIcon} className="w-[12px] h-[6px]" />
                         </div>
                     </div>
-                    <InputNumber onChange={(value: number | null) => setPetrolInputData({ ...petrolInputData, num1: value })} value={petrolInputData.num1} className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[164px] max-w-[164px]" placeholder="miles/Km/litres" />
+                    <InputNumber onChange={(value: number | null) => setPetrolEmployeeInputData({ ...petrolEmployeeInputData, num1: value })} value={petrolEmployeeInputData.num1} className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[164px] max-w-[164px]" placeholder="miles/Km/litres" />
                     <div className="flex flex-row">
                         <Select
                             style={{ width: 120 }}
                             suffixIcon={null}
                             placeholder={"Unit"}
-                            onChange={(value) => setPetrolInputData({ ...petrolInputData, unit: value })}
-                            value={petrolInputData.unit}
+                            onChange={(value) => setPetrolEmployeeInputData({ ...petrolEmployeeInputData, unit: value })}
+                            value={petrolEmployeeInputData.unit}
                             options={[
                                 { value: 'miles', label: 'Miles' },
                                 { value: 'km', label: 'Km' },
@@ -105,32 +105,30 @@ const CustomForm = (props: CustomFormProps) => {
                             <img src={DropdownIcon} className="w-[12px] h-[6px]" />
                         </div>
                     </div>
-                    <InputNumber onChange={(value: number | null) => setPetrolInputData({ ...petrolInputData, num2: value })} value={petrolInputData.num2} className="custom-select w-[134px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px]" placeholder="miles/Km/litres" />
+                    <InputNumber onChange={(value: number | null) => setPetrolEmployeeInputData({ ...petrolEmployeeInputData, num2: value })} value={petrolEmployeeInputData.num2} className="custom-select w-[134px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px]" placeholder="miles/Km/litres" />
                     <div className="border-[1px] border-[#B8BFEA] w-[36px] h-[36px] rounded-[4px] flex justify-center items-center cursor-pointer">
                     
-                        <img onClick={() => setCarPetrol((prev) => {
-                            return [...prev, petrolInputData]
+                        <img onClick={() => setCarPetrolEmployee((prev) => {
+                            return [...prev, petrolEmployeeInputData]
                         })} src={AddIcon} className="" />
                        
                     </div>
                 </div>
                 <div className="flex flex-row justify-start mt-3">
                     <Input onChange={(event: ChangeEvent<HTMLInputElement>) => {
-                        setPetrolInputData({ ...petrolInputData, driver: event?.target?.value })
+                        setPetrolEmployeeInputData({ ...petrolEmployeeInputData, driver: event?.target?.value })
                         return false;
-                    }} value={petrolInputData.driver} className="custom-select w-[251px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px]" placeholder="Driver Name" />
+                    }} value={petrolEmployeeInputData.driver} className="custom-select w-[251px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px]" placeholder="Driver Name" />
                     <Input onChange={(event: ChangeEvent<HTMLInputElement>) => {
-                        setPetrolInputData({ ...petrolInputData, registrationNumber: event?.target?.value })
+                        setPetrolEmployeeInputData({ ...petrolEmployeeInputData, registrationNumber: event?.target?.value })
                         return false;
-                    }} value={petrolInputData.registrationNumber} className="custom-select w-[302px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px] ml-[15px]" placeholder="Registration Number" />
+                    }} value={petrolEmployeeInputData.registrationNumber} className="custom-select w-[302px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px] ml-[15px]" placeholder="Registration Number" />
                      
-                    <Checkbox disabled={false} onChange={(e) => setPetrolInputData({...petrolInputData, checked: e.target.checked})} className="flex justify-center items-center ml-3"  >
-                        Owned
-                    </Checkbox>
+                
                 </div>
-                {carPetrol && carPetrol.length > 0 && (
+                {carPetrolEmployee && carPetrolEmployee.length > 0 && (
                     <div>
-                        {carPetrol.map((value: MasterInputInformation, index: number) => {
+                        {carPetrolEmployee.map((value: MasterInputInformationEmployee, index: number) => {
                             return (
                                 <div className="mt-3" key={index}>
                                     <div className="flex flex-row justify-between">
@@ -173,9 +171,7 @@ const CustomForm = (props: CustomFormProps) => {
                                         <Input disabled value={value.driver} className="custom-select w-[251px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px]" placeholder="Driver Name" />
                                         <Input disabled value={value.registrationNumber} className="custom-select w-[302px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px] ml-[15px]" placeholder="Registration Number" />
                                         
-                                        <Checkbox disabled={true} checked={value?.checked} className="flex justify-center items-center ml-3">
-                                            Owned
-                                        </Checkbox>
+                                      
                                     </div>
                                 </div>
                             );
@@ -190,10 +186,10 @@ const CustomForm = (props: CustomFormProps) => {
                     <div className="flex flex-row">
                         <Select
                             style={{ width: 120 }}
-                            onChange={(value) => setDieselInputData({ ...dieselInputData, ...{ type: value } })}
+                            onChange={(value) => setDieselEmployeeInputData({ ...dieselEmployeeInputData, ...{ type: value } })}
                             suffixIcon={null}
                             placeholder={"Car Type"}
-                            value={dieselInputData.type}
+                            value={dieselEmployeeInputData.type}
                             options={[
                                 { value: 'small-car', label: 'Small Car' },
                                 { value: 'medium-car', label: 'Medium Car' },
@@ -206,14 +202,14 @@ const CustomForm = (props: CustomFormProps) => {
                             <img src={DropdownIcon} className="w-[12px] h-[6px]" />
                         </div>
                     </div>
-                    <InputNumber onChange={(value: number | null) => setDieselInputData({ ...dieselInputData, num1: value })} value={dieselInputData.num1} className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[164px] max-w-[164px]" placeholder="miles/Km/litres" />
+                    <InputNumber onChange={(value: number | null) => setDieselEmployeeInputData({ ...dieselEmployeeInputData, num1: value })} value={dieselEmployeeInputData.num1} className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[164px] max-w-[164px]" placeholder="miles/Km/litres" />
                     <div className="flex flex-row">
                         <Select
                             style={{ width: 120 }}
                             suffixIcon={null}
                             placeholder={"Unit"}
-                            onChange={(value) => setDieselInputData({ ...dieselInputData, unit: value })}
-                            value={dieselInputData.unit}
+                            onChange={(value) => setDieselEmployeeInputData({ ...dieselEmployeeInputData, unit: value })}
+                            value={dieselEmployeeInputData.unit}
                             options={[
                                 { value: 'miles', label: 'Miles' },
                                 { value: 'km', label: 'Km' },
@@ -226,30 +222,28 @@ const CustomForm = (props: CustomFormProps) => {
                             <img src={DropdownIcon} className="w-[12px] h-[6px]" />
                         </div>
                     </div>
-                    <InputNumber onChange={(value: number | null) => setDieselInputData({ ...dieselInputData, num2: value })} value={dieselInputData.num2} className="custom-select w-[134px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px]" placeholder="miles/Km/litres" />
+                    <InputNumber onChange={(value: number | null) => setDieselEmployeeInputData({ ...dieselEmployeeInputData, num2: value })} value={dieselEmployeeInputData.num2} className="custom-select w-[134px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px]" placeholder="miles/Km/litres" />
                     <div className="border-[1px] border-[#B8BFEA] w-[36px] h-[36px] rounded-[4px] flex justify-center items-center cursor-pointer">
-                        <img onClick={() => setCarDiesel((prev) => {
-                            return [...prev, dieselInputData]
+                        <img onClick={() => setCarDieselEmployee((prev) => {
+                            return [...prev, dieselEmployeeInputData]
                         })} src={AddIcon} className="" />
                     </div>
                 </div>
                 <div className="flex flex-row justify-start mt-3">
                     <Input onChange={(event: ChangeEvent<HTMLInputElement>) => {
-                        setDieselInputData({ ...dieselInputData, driver: event?.target?.value })
+                        setDieselEmployeeInputData({ ...dieselEmployeeInputData, driver: event?.target?.value })
                         return false;
-                    }} value={dieselInputData.driver} className="custom-select w-[251px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px]" placeholder="Driver Name" />
+                    }} value={dieselEmployeeInputData.driver} className="custom-select w-[251px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px]" placeholder="Driver Name" />
                     <Input onChange={(event: ChangeEvent<HTMLInputElement>) => {
-                        setDieselInputData({ ...dieselInputData, registrationNumber: event?.target?.value })
+                        setDieselEmployeeInputData({ ...dieselEmployeeInputData, registrationNumber: event?.target?.value })
                         return false;
-                    }} value={dieselInputData.registrationNumber} className="custom-select w-[302px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px] ml-[15px]" placeholder="Registration Number" />
+                    }} value={dieselEmployeeInputData.registrationNumber} className="custom-select w-[302px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px] ml-[15px]" placeholder="Registration Number" />
                    
-                    <Checkbox disabled={false} onChange={(e) => setDieselInputData({...dieselInputData, checked: e.target.checked})} className="flex justify-center items-center ml-3">
-                        Owned
-                    </Checkbox>
+                  
                 </div>
-                {carDiesel && carDiesel.length > 0 && (
+                {carDieselEmployee && carDieselEmployee.length > 0 && (
                     <div>
-                        {carDiesel.map((value: MasterInputInformation, index: number) => {
+                        {carDieselEmployee.map((value: MasterInputInformationEmployee, index: number) => {
                             return (
                                 <div className="mt-3" key={index}>
                                     <div className="flex flex-row justify-between">
@@ -292,9 +286,7 @@ const CustomForm = (props: CustomFormProps) => {
                                         <Input disabled value={value.driver} className="custom-select w-[251px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px]" placeholder="Driver Name" />
                                         <Input disabled value={value.registrationNumber} className="custom-select w-[302px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px] ml-[15px]" placeholder="Registration Number" />
                                         
-                                        <Checkbox disabled={true} checked={value?.checked} className="flex justify-center items-center ml-3">
-                                            Owned
-                                        </Checkbox>
+                                       
                                     </div>
                                 </div>
                             );
@@ -309,10 +301,10 @@ const CustomForm = (props: CustomFormProps) => {
                     <div className="flex flex-row">
                         <Select
                             style={{ width: 120 }}
-                            onChange={(value) => setAverageInputData({ ...averageInputData, ...{ type: value } })}
+                            onChange={(value) => setAverageEmployeeInputData({ ...averageEmployeeInputData, ...{ type: value } })}
                             suffixIcon={null}
                             placeholder={"Car Type"}
-                            value={averageInputData.type}
+                            value={averageEmployeeInputData.type}
                             options={[
                                 { value: 'small-car', label: 'Small Car' },
                                 { value: 'medium-car', label: 'Medium Car' },
@@ -325,14 +317,14 @@ const CustomForm = (props: CustomFormProps) => {
                             <img src={DropdownIcon} className="w-[12px] h-[6px]" />
                         </div>
                     </div>
-                    <InputNumber onChange={(value: number | null) => setAverageInputData({ ...averageInputData, num1: value })} value={averageInputData.num1} className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[164px] max-w-[164px]" placeholder="miles/Km/litres" />
+                    <InputNumber onChange={(value: number | null) => setAverageEmployeeInputData({ ...averageEmployeeInputData, num1: value })} value={averageEmployeeInputData.num1} className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[164px] max-w-[164px]" placeholder="miles/Km/litres" />
                     <div className="flex flex-row">
                         <Select
                             style={{ width: 120 }}
                             suffixIcon={null}
                             placeholder={"Unit"}
-                            onChange={(value) => setAverageInputData({ ...averageInputData, unit: value })}
-                            value={averageInputData.unit}
+                            onChange={(value) => setAverageEmployeeInputData({ ...averageEmployeeInputData, unit: value })}
+                            value={averageEmployeeInputData.unit}
                             options={[
                                 { value: 'miles', label: 'Miles' },
                                 { value: 'km', label: 'Km' },
@@ -345,30 +337,28 @@ const CustomForm = (props: CustomFormProps) => {
                             <img src={DropdownIcon} className="w-[12px] h-[6px]" />
                         </div>
                     </div>
-                    <InputNumber onChange={(value: number | null) => setAverageInputData({ ...averageInputData, num2: value })} value={averageInputData.num2} className="custom-select w-[134px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px]" placeholder="miles/Km/litres" />
+                    <InputNumber onChange={(value: number | null) => setAverageEmployeeInputData({ ...averageEmployeeInputData, num2: value })} value={averageEmployeeInputData.num2} className="custom-select w-[134px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px]" placeholder="miles/Km/litres" />
                     <div className="border-[1px] border-[#B8BFEA] w-[36px] h-[36px] rounded-[4px] flex justify-center items-center cursor-pointer">
-                        <img onClick={() => setCarAverage((prev) => {
-                            return [...prev, averageInputData]
+                        <img onClick={() => setCarAverageEmployee((prev) => {
+                            return [...prev, averageEmployeeInputData]
                         })} src={AddIcon} className="" />
                     </div>
                 </div>
                 <div className="flex flex-row justify-start mt-3">
                     <Input onChange={(event: ChangeEvent<HTMLInputElement>) => {
-                        setAverageInputData({ ...averageInputData, driver: event?.target?.value })
+                        setAverageEmployeeInputData({ ...averageEmployeeInputData, driver: event?.target?.value })
                         return false;
-                    }} value={averageInputData.driver} className="custom-select w-[251px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px]" placeholder="Driver Name" />
+                    }} value={averageEmployeeInputData.driver} className="custom-select w-[251px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px]" placeholder="Driver Name" />
                     <Input onChange={(event: ChangeEvent<HTMLInputElement>) => {
-                        setAverageInputData({ ...averageInputData, registrationNumber: event?.target?.value })
+                        setAverageEmployeeInputData({ ...averageEmployeeInputData, registrationNumber: event?.target?.value })
                         return false;
-                    }} value={averageInputData.registrationNumber} className="custom-select w-[302px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px] ml-[15px]" placeholder="Registration Number" />
+                    }} value={averageEmployeeInputData.registrationNumber} className="custom-select w-[302px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px] ml-[15px]" placeholder="Registration Number" />
                     
-                    <Checkbox disabled={false} onChange={(e) => setAverageInputData({...averageInputData, checked: e.target.checked})} className="flex justify-center items-center ml-3">
-                        Owned
-                    </Checkbox>
+                  
                 </div>
-                {carAverage && carAverage.length > 0 && (
+                {carAverageEmployee && carAverageEmployee.length > 0 && (
                     <div>
-                        {carAverage.map((value: MasterInputInformation, index: number) => {
+                        {carAverageEmployee.map((value: MasterInputInformationEmployee, index: number) => {
                             return (
                                 <div className="mt-3" key={index}>
                                     <div className="flex flex-row justify-between">
@@ -411,9 +401,7 @@ const CustomForm = (props: CustomFormProps) => {
                                         <Input disabled value={value.driver} className="custom-select w-[251px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px]" placeholder="Driver Name" />
                                         <Input disabled value={value.registrationNumber} className="custom-select w-[302px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px] ml-[15px]" placeholder="Registration Number" />
                                        
-                                        <Checkbox disabled={true} checked={value?.checked} className="flex justify-center items-center ml-3">
-                                            Owned
-                                        </Checkbox>
+                                      
                                     </div>
                                 </div>
                             );
@@ -428,10 +416,10 @@ const CustomForm = (props: CustomFormProps) => {
                     <div className="flex flex-row">
                         <Select
                             style={{ width: 120 }}
-                            onChange={(value) => setHybridInputData({ ...hybridInputData, ...{ type: value } })}
+                            onChange={(value) => setHybridEmployeeInputData({ ...hybridEmployeeInputData, ...{ type: value } })}
                             suffixIcon={null}
                             placeholder={"Car Type"}
-                            value={hybridInputData.type}
+                            value={hybridEmployeeInputData.type}
                             options={[
                                 { value: 'small-car', label: 'Small Car' },
                                 { value: 'medium-car', label: 'Medium Car' },
@@ -444,14 +432,14 @@ const CustomForm = (props: CustomFormProps) => {
                             <img src={DropdownIcon} className="w-[12px] h-[6px]" />
                         </div>
                     </div>
-                    <InputNumber onChange={(value: number | null) => setHybridInputData({ ...hybridInputData, num1: value })} value={hybridInputData.num1} className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[164px] max-w-[164px]" placeholder="miles/Km/litres" />
+                    <InputNumber onChange={(value: number | null) => setHybridEmployeeInputData({ ...hybridEmployeeInputData, num1: value })} value={hybridEmployeeInputData.num1} className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[164px] max-w-[164px]" placeholder="miles/Km/litres" />
                     <div className="flex flex-row">
                         <Select
                             style={{ width: 120 }}
                             suffixIcon={null}
                             placeholder={"Unit"}
-                            onChange={(value) => setHybridInputData({ ...hybridInputData, unit: value })}
-                            value={hybridInputData.unit}
+                            onChange={(value) => setHybridEmployeeInputData({ ...hybridEmployeeInputData, unit: value })}
+                            value={hybridEmployeeInputData.unit}
                             options={[
                                 { value: 'miles', label: 'Miles' },
                                 { value: 'km', label: 'Km' },
@@ -464,30 +452,28 @@ const CustomForm = (props: CustomFormProps) => {
                             <img src={DropdownIcon} className="w-[12px] h-[6px]" />
                         </div>
                     </div>
-                    <InputNumber onChange={(value: number | null) => setHybridInputData({ ...hybridInputData, num2: value })} value={hybridInputData.num2} className="custom-select w-[134px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px]" placeholder="miles/Km/litres" />
+                    <InputNumber onChange={(value: number | null) => setHybridEmployeeInputData({ ...hybridEmployeeInputData, num2: value })} value={hybridEmployeeInputData.num2} className="custom-select w-[134px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px]" placeholder="miles/Km/litres" />
                     <div className="border-[1px] border-[#B8BFEA] w-[36px] h-[36px] rounded-[4px] flex justify-center items-center cursor-pointer">
-                        <img onClick={() => setCarHybrid((prev) => {
-                            return [...prev, hybridInputData]
+                        <img onClick={() => setCarHybridEmployee((prev) => {
+                            return [...prev, hybridEmployeeInputData]
                         })} src={AddIcon} className="" />
                     </div>
                 </div>
                 <div className="flex flex-row justify-start mt-3">
                     <Input onChange={(event: ChangeEvent<HTMLInputElement>) => {
-                        setHybridInputData({ ...hybridInputData, driver: event?.target?.value })
+                        setHybridEmployeeInputData({ ...hybridEmployeeInputData, driver: event?.target?.value })
                         return false;
-                    }} value={hybridInputData.driver} className="custom-select w-[251px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px]" placeholder="Driver Name" />
+                    }} value={hybridEmployeeInputData.driver} className="custom-select w-[251px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px]" placeholder="Driver Name" />
                     <Input onChange={(event: ChangeEvent<HTMLInputElement>) => {
-                        setHybridInputData({ ...hybridInputData, registrationNumber: event?.target?.value })
+                        setHybridEmployeeInputData({ ...hybridEmployeeInputData, registrationNumber: event?.target?.value })
                         return false;
-                    }} value={hybridInputData.registrationNumber} className="custom-select w-[302px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px] ml-[15px]" placeholder="Registration Number" />
+                    }} value={hybridEmployeeInputData.registrationNumber} className="custom-select w-[302px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px] ml-[15px]" placeholder="Registration Number" />
                     
-                    <Checkbox disabled={false} onChange={(e) => setHybridInputData({...hybridInputData, checked: e.target.checked})} className="flex justify-center items-center ml-3">
-                        Owned
-                    </Checkbox>
+                 
                 </div>
-                {carHybrid && carHybrid.length > 0 && (
+                {carHybridEmployee && carHybridEmployee.length > 0 && (
                     <div>
-                        {carHybrid.map((value: MasterInputInformation, index: number) => {
+                        {carHybridEmployee.map((value: MasterInputInformationEmployee, index: number) => {
                             return (
                                 <div className="mt-3" key={index}>
                                     <div className="flex flex-row justify-between">
@@ -529,10 +515,7 @@ const CustomForm = (props: CustomFormProps) => {
                                     <div className="flex flex-row justify-start mt-3">
                                         <Input disabled value={value.driver} className="custom-select w-[251px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px]" placeholder="Driver Name" />
                                         <Input disabled value={value.registrationNumber} className="custom-select w-[302px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px] ml-[15px]" placeholder="Registration Number" />
-                                        
-                                        <Checkbox disabled={true} checked={value?.checked} className="flex justify-center items-center ml-3">
-                                            Owned
-                                        </Checkbox>
+                                      
                                     </div>
                                 </div>
                             );
@@ -544,28 +527,28 @@ const CustomForm = (props: CustomFormProps) => {
     );
 }
 
-export default CustomForm;
+export default CustomFormEmployee;
 
-interface CustomFormProps {
-    carPetrol: MasterInputInformation[];
-    carDiesel: MasterInputInformation[];
-    carAverage: MasterInputInformation[];
-    carHybrid: MasterInputInformation[];
+interface CustomFormEmployeeProps {
+    carPetrolEmployee: MasterInputInformationEmployee[];
+    carDieselEmployee: MasterInputInformationEmployee[];
+    carAverageEmployee: MasterInputInformationEmployee[];
+    carHybridEmployee: MasterInputInformationEmployee[];
   
-    setCarPetrol: Dispatch<SetStateAction<MasterInputInformation[]>>
-    setCarDiesel: Dispatch<SetStateAction<MasterInputInformation[]>>
-    setCarAverage: Dispatch<SetStateAction<MasterInputInformation[]>>
-    setCarHybrid: Dispatch<SetStateAction<MasterInputInformation[]>>
+    setCarPetrolEmployee: Dispatch<SetStateAction<MasterInputInformationEmployee[]>>
+    setCarDieselEmployee: Dispatch<SetStateAction<MasterInputInformationEmployee[]>>
+    setCarAverageEmployee: Dispatch<SetStateAction<MasterInputInformationEmployee[]>>
+    setCarHybridEmployee: Dispatch<SetStateAction<MasterInputInformationEmployee[]>>
    
 }
 
-interface MasterInputInformation {
+interface MasterInputInformationEmployee {
     type: string | null;
     num1: number | null;
     unit: string | null;
     num2: number | null;
     driver: string;
     registrationNumber: string;
-    checked: boolean
+   
    
 }
