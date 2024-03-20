@@ -77,3 +77,49 @@ html, body {
 :where(.css-dev-only-do-not-override-1uweeqc).ant-select-outlined:not(.ant-select-customize-input) .ant-select-selector{
   background: #FEFEFE;
 }
+.ant-tabs-nav-list{
+  width: 100%;
+}
+.ant-tabs-tab{
+  width: 50%;
+  background: #FEFEFE;
+  border-radius: 0px !important;
+}
+
+:where(.css-dev-only-do-not-override-1uweeqc).ant-tabs-card >.ant-tabs-nav .ant-tabs-tab-active{
+  background: #FEFEFE !important;
+  box-shadow: none !important;
+}
+:where(.css-dev-only-do-not-override-1uweeqc).ant-tabs-card.ant-tabs-top >.ant-tabs-nav .ant-tabs-tab-active{
+  border-bottom-color: #FEFEFE;
+}
+:where(.css-dev-only-do-not-override-1uweeqc).ant-tabs .ant-tabs-tab{
+  box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  background: #F6F7FC !important;
+  border:0px;
+}
+:where(.css-dev-only-do-not-override-1uweeqc).ant-tabs-card >.ant-tabs-nav .ant-tabs-tab-active h5{
+  color: #001489 !important;
+}
+:where(.css-dev-only-do-not-override-1uweeqc).ant-tabs .ant-tabs-tab h5{
+  color:#B8BFEA !important;
+}
+:where(.css-dev-only-do-not-override-1uweeqc).ant-tabs-top >.ant-tabs-nav::before{
+  bottom: none;
+}
+:where(.css-dev-only-do-not-override-1uweeqc).ant-tabs-card >.ant-tabs-nav .ant-tabs-tab{
+  border:0px;
+}
+:where(.css-dev-only-do-not-override-1uweeqc).ant-tabs-card.ant-tabs-top >.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab, :where(.css-dev-only-do-not-override-1uweeqc).ant-tabs-card.ant-tabs-bottom >.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab, :where(.css-dev-only-do-not-override-1uweeqc).ant-tabs-card.ant-tabs-top >div>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab, :where(.css-dev-only-do-not-override-1uweeqc).ant-tabs-card.ant-tabs-bottom >div>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab{
+  margin-left: 0px;
+ 
+  
+}
+:where(.css-dev-only-do-not-override-1uweeqc).ant-tabs .ant-tabs-tab+.ant-tabs-tab{
+  margin-left: 0px;
+ 
+ 
+}
+.custom-energyIcon:hover{
+  background: #001489;
+}

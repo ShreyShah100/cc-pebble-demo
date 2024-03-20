@@ -19,11 +19,12 @@ import DetailActiveIcon from "./assets/Detailed Carbonhover.svg";
 import CarbonActiveIcon from "./assets/Co2 Offsettinghover.svg";
 import CustomFormEmployee from "./components/CustomFormEmployee";
 import CarbonOffset from "./components/CarbonOffset";
+import EnergyConsuption from "./components/EnergyConsucption";
 
 
 const App: React.FC = () => {
 
-  const [activeTab, setActiveTab] = React.useState<string>("tab-5");
+  const [activeTab, setActiveTab] = React.useState<string>("tab-4");
   const [carPetrol, setCarPetrol] = React.useState<MasterInputInformation[]>([]);
   const [carDiesel, setCarDiesel] = React.useState<MasterInputInformation[]>([]);
   const [carAverage, setCarAverage] = React.useState<MasterInputInformation[]>([]);
@@ -36,7 +37,7 @@ const App: React.FC = () => {
   const renderContent = () => {
     switch (activeTab) {
       case "tab-1":
-        return <CompanyInfo></CompanyInfo>
+        return <CompanyInfo/>
       case "tab-2":
         return <CustomFormEmployee
         carPetrolEmployee={carPetrolEmployee}
@@ -62,11 +63,11 @@ const App: React.FC = () => {
          
         />
       case "tab-4":
-        return <label className={`font-['Quicksand'] !text-[#001489] text-[16px] font-bold`}>Energy Consumption</label>
+        return <EnergyConsuption/>
       case "tab-5":
-        return <DetailCarbon></DetailCarbon>
+        return <DetailCarbon/>
       case "tab-6":
-        return <CarbonOffset></CarbonOffset>
+        return <CarbonOffset/>
     }
   }
   return (
@@ -77,35 +78,35 @@ const App: React.FC = () => {
           <div className="flex flex-row">
             <div className={`flex flex-row min-w-[276px] cursor-pointer min-h-[36px] border-[2px] border-[#B8BFEA] justify-start items-center bg-[#FEFEFE] rounded-tl-[4px] ${activeTab === "tab-1" && '!bg-[#001489]'}`} onClick={() => setActiveTab("tab-1")}>
             {activeTab === "tab-1" ? (
-              <img src={CompanyInfoActiveIcon} className="ml-2"></img>):(<img src={CompanyInfoIcon} className="ml-2"></img>)}
+              <img src={CompanyInfoActiveIcon} className="ml-2"/>):(<img src={CompanyInfoIcon} className="ml-2"/>)}
               <label className={`font-['Quicksand'] cursor-pointer !text-[#001489] text-[16px] ml-2 font-bold ${activeTab === "tab-1" && '!text-[#FEFEFE]'}`}>Company Information</label>
             </div>
             <div className={`flex min-w-[276px] cursor-pointer min-h-[36px] border-[2px] border-[#B8BFEA] justify-start items-center bg-[#FEFEFE] border-l-[0px] ${activeTab === "tab-2" && '!bg-[#001489]'}`} onClick={() => setActiveTab("tab-2")}>
             {activeTab === "tab-2" ? (
-            <img src={EmployeeActiveIcon} className="ml-2"></img>):(<img src={EmployeeIcon} className="ml-2"></img>)}
+            <img src={EmployeeActiveIcon} className="ml-2"/>):(<img src={EmployeeIcon} className="ml-2"/>)}
               <label className={`font-['Quicksand'] cursor-pointer !text-[#001489] ml-2 text-[16px] font-bold ${activeTab === "tab-2" && '!text-[#FEFEFE]'}`}>Employee Travel</label>
             </div>
             <div className={`flex min-w-[276px] cursor-pointer min-h-[36px] border-[2px] border-[#B8BFEA] justify-start items-center bg-[#FEFEFE] border-l-[0px] rounded-tr-[4px] ${activeTab === "tab-3" && '!bg-[#001489]'}`} onClick={() => setActiveTab("tab-3")}>
             {activeTab === "tab-3" ? (
-            <img src={BusinessActiveIcon} className="ml-2 "></img>):( <img src={BusinessIcon} className="ml-2 "></img>)}
+            <img src={BusinessActiveIcon} className="ml-2"/>):( <img src={BusinessIcon} className="ml-2 "/>)}
               <label className={`font-['Quicksand'] cursor-pointer !text-[#001489] ml-2 text-[16px] font-bold ${activeTab === "tab-3" && '!text-[#FEFEFE]'}`}>Business Travel</label>
             </div>
           </div>
           <div className="flex flex-row">
             <div className={`flex min-w-[276px] cursor-pointer min-h-[36px] border-[2px] border-[#B8BFEA] justify-start items-center bg-[#FEFEFE] border-t-[0px] rounded-bl-[4px] ${activeTab === "tab-4" && '!bg-[#001489]'}`} onClick={() => setActiveTab("tab-4")}>
             {activeTab === "tab-4" ? (
-            <img src={EnergyActiveIcon} className="ml-2"></img>):(<img src={EnergyIcon} className="ml-2"></img>)}
+            <img src={EnergyActiveIcon} className="ml-2"/>):(<img src={EnergyIcon} className="ml-2"/>)}
               <label className={`font-['Quicksand'] cursor-pointer !text-[#001489] ml-2 text-[16px] font-bold ${activeTab === "tab-4" && '!text-[#FEFEFE]'}`}>Energy Consumption</label>
             </div>
             <div className={`flex min-w-[276px] cursor-pointer min-h-[36px] border-[2px] border-[#B8BFEA] justify-start items-center bg-[#FEFEFE] border-l-[0px] border-t-[0px] ${activeTab === "tab-5" && '!bg-[#001489]'}`} onClick={() => setActiveTab("tab-5")}>
             {activeTab === "tab-5" ? (
-            <img src={DetailActiveIcon} className="ml-2 "></img>):( <img src={DetailIcon} className="ml-2 "></img>)}
+            <img src={DetailActiveIcon} className="ml-2 "/>):( <img src={DetailIcon} className="ml-2 "/>)}
            
               <label className={`font-['Quicksand'] cursor-pointer ml-2 !text-[#001489] text-[16px] font-bold ${activeTab === "tab-5" && '!text-[#FEFEFE]'}`}>Detailed Carbon</label>
             </div>
             <div className={`flex min-w-[276px] cursor-pointer min-h-[36px] border-[2px] border-[#B8BFEA] justify-start items-center bg-[#FEFEFE] border-l-[0px] border-t-[0px] rounded-br-[4px]  ${activeTab === "tab-6" && '!bg-[#001489]'}`} onClick={() => setActiveTab("tab-6")}>
             {activeTab === "tab-6" ? (
-            <img src={CarbonActiveIcon} className="ml-2 "></img>):( <img src={CarbonIcon} className="ml-2 "></img>)}
+            <img src={CarbonActiveIcon} className="ml-2 "/>):( <img src={CarbonIcon} className="ml-2 "/>)}
             
               <label className={`font-['Quicksand'] ml-2 !text-[#001489] text-[16px] cursor-pointer font-bold ${activeTab === "tab-6" && '!text-[#FEFEFE]'}`}>Carbon Offsetting</label>
             </div>
