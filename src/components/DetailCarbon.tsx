@@ -44,12 +44,10 @@ function DetailCarbon (){
                                 { value: 'km', label: 'Km' },
                                 { value: 'ltr', label: 'Litres' },
                             ]}
-                            className="custom-select bg-[#FEFEFE] h-[36px] border-[1px]  border-[#363A4F] rounded-[4px_0px_0px_4px] min-w-[131px] max-w-[131px]"
+                            className="custom-select bg-[#FEFEFE] h-[36px] border-[1px]  border-[#363A4F] rounded-[4px] min-w-[164px] max-w-[164px]"
 
                         />
-                        <div className="flex justify-center items-center w-[33px] h-[36px] border-[1px] border-[#363A4F] border-l-[0px] rounded-[0px_4px_4px_0px]">
-                            <img src={DropdownIcon} className="w-[12px] h-[6px]" />
-                        </div>
+                        
                         <Input  className="custom-select  bg-[#FEFEFE] w-[93px] h-[36px]  ml-[15px] border-[1px] border-[#363A4F] rounded-[4px]" placeholder="tonnes" />
                         <Select
                             style={{ width: 65, backgroundColor:"#FEFEFE" }}
@@ -60,12 +58,10 @@ function DetailCarbon (){
                                 { value: 'km', label: 'Km' },
                                 { value: 'ltr', label: 'Litres' },
                             ]}
-                            className="custom-select h-[36px] bg-[#FEFEFE] border-[1px] ml-[15px] border-[#363A4F] rounded-[4px_0px_0px_4px] min-w-[65px] max-w-[65px]"
+                            className="custom-select h-[36px] bg-[#FEFEFE] border-[1px]  ml-[15px] border-[#363A4F] rounded-[4px] min-w-[98px] max-w-[98px]"
 
                         />
-                        <div className="flex justify-center items-center w-[33px] h-[36px] border-[1px] border-[#363A4F] border-l-[0px] rounded-[0px_4px_4px_0px]">
-                            <img src={DropdownIcon} className="w-[12px] h-[6px]" />
-                        </div>
+                      
                         <Input  className="custom-select bg-[#FEFEFE] w-[93px] h-[36px] ml-[15px] border-[1px] border-[#363A4F] bg-[#FEFEFE] rounded-[4px]" placeholder="2100000" /> 
                         <div className="border-[1px] border-[#B8BFEA] w-[36px] h-[36px] ml-[15px] rounded-[4px] flex justify-center items-center cursor-pointer">
                         <img src={AddIcon} /></div>
@@ -82,12 +78,10 @@ function DetailCarbon (){
                                 { value: 'km', label: 'Km' },
                                 { value: 'ltr', label: 'Litres' },
                             ]}
-                            className="custom-select bg-[#FEFEFE] h-[36px] border-[1px]  border-[#363A4F] rounded-[4px_0px_0px_4px] min-w-[131px] max-w-[131px]"
+                            className="custom-select bg-[#FEFEFE] h-[36px] border-[1px]  border-[#363A4F] rounded-[4px] min-w-[164px] max-w-[164px]"
 
                         />
-                        <div className="flex justify-center items-center w-[33px] h-[36px]  border-[1px] border-[#363A4F] border-l-[0px] rounded-[0px_4px_4px_0px]">
-                            <img src={DropdownIcon} className="w-[12px] h-[6px]" />
-                        </div>
+                       
                         <Input  className="custom-select bg-[#FEFEFE] w-[93px] h-[36px]  ml-[15px] border-[1px] border-[#363A4F] rounded-[4px]" placeholder="tonnes" />
                         <Select
                             style={{ width: 65}}
@@ -98,12 +92,10 @@ function DetailCarbon (){
                                 { value: 'km', label: 'Km' },
                                 { value: 'ltr', label: 'Litres' },
                             ]}
-                            className="custom-select bg-[#FEFEFE] h-[36px] border-[1px] ml-[15px] border-[#363A4F] rounded-[4px_0px_0px_4px] min-w-[65px] max-w-[65px]"
+                            className="custom-select bg-[#FEFEFE] h-[36px] border-[1px] ml-[15px] border-[#363A4F] rounded-[4px] min-w-[98px] max-w-[px]"
 
                         />
-                        <div className="flex justify-center items-center w-[33px] h-[36px] border-[1px] border-[#363A4F] border-l-[0px] rounded-[0px_4px_4px_0px]">
-                            <img src={DropdownIcon} className="w-[12px] h-[6px]" />
-                        </div>
+                       
                         <Input  className="custom-select bg-[#FEFEFE] w-[93px] h-[36px] ml-[15px] border-[1px] border-[#363A4F] rounded-[4px]" placeholder="2100000" /> 
                         <div className="border-[1px] border-[#B8BFEA] w-[36px] h-[36px] ml-[15px] rounded-[4px] flex justify-center items-center cursor-pointer">
                         <img src={AddIcon} /></div>
@@ -155,10 +147,8 @@ function DetailCarbon (){
                                         { value: 'Tools', label: 'Tools' },
                                         { value: 'Ship', label: 'Ship' },
                                     ]}
-                                    className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px_0px_0px_4px] min-w-[100px] max-w-[100px]"/> 
-                                    <div className="flex justify-center items-center w-[33px] h-[36px] border-[1px] border-[#363A4F] border-l-[0px] rounded-[0px_4px_4px_0px]">
-                                        <img src={DropdownIcon} className="w-[12px] h-[6px]" />
-                                    </div>
+                                    className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[140px] max-w-[140px]"/> 
+                                    
                                 </div>
                             </td>
                             <td>
@@ -172,10 +162,8 @@ function DetailCarbon (){
                                         { value: 'Tools', label: 'Tools' },
                                         { value: 'Ship', label: 'Ship' },
                                     ]}
-                                    className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px_0px_0px_4px] min-w-[100px] max-w-[100px]"/> 
-                                    <div className="flex justify-center items-center w-[33px] h-[36px] border-[1px] border-[#363A4F] border-l-[0px] rounded-[0px_4px_4px_0px]">
-                                        <img src={DropdownIcon} className="w-[12px] h-[6px]" />
-                                    </div>
+                                    className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[140px] max-w-[140px]"/> 
+                                   
                                 </div>
                             </td>
                             <td>
@@ -189,10 +177,8 @@ function DetailCarbon (){
                                         { value: 'kg', label: 'kg' },
                                     
                                     ]}
-                                    className="custom-select bg-[#FEFEFE] h-[36px] border-[1px]   border-[#363A4F] rounded-[4px_0px_0px_4px] min-w-[65px] max-w-[65px]"/>
-                                    <div className="flex justify-center items-center w-[33px] h-[36px] border-[1px] border-[#363A4F] border-l-[0px] rounded-[0px_4px_4px_0px]">
-                                        <img src={DropdownIcon} className="w-[12px] h-[6px]" />
-                                    </div>
+                                    className="custom-select bg-[#FEFEFE] h-[36px] border-[1px]   border-[#363A4F] rounded-[4px] min-w-[98px] max-w-[98px]"/>
+                                   
                                 </div>
                             </td>
                             <td>
@@ -212,104 +198,11 @@ function DetailCarbon (){
                     </tbody>
                 </table>
                 
-                <div className="flex flex-row w-[87px] bg-[#001489] rounded-[4px] p-[5px] self-end justify-center cursor-pointer">
+                <div className="flex flex-row w-[87px] bg-[#001489] rounded-[4px] p-[5px] mt-5 self-end justify-center cursor-pointer">
                     <img src={AddIconColor}/>
                     <Typography.Title className="my-auto font-['Quicksand'] font-bold !text-[#ffffff] !text-[16px] !mt-1 !mb-0 ">Add</Typography.Title>
                 </div>
-                <table className="mt-5">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <Typography.Title level={5} className="font-['Quicksand'] font-bold !text-[#001489] !text-[16px] !mt-0  !mb-0  text-nowrap">Sub Category</Typography.Title>
-                            </td>
-                            <td>
-                                <Typography.Title level={5} className="font-['Quicksand'] font-bold !text-[#001489] !text-[16px] !mt-0  !mb-0  text-nowrap">Name</Typography.Title>
-                            </td>
-                            <td>
-                                <Typography.Title level={5} className="font-['Quicksand'] font-bold !text-[#001489] !text-[16px] !mt-0  !mb-0  text-nowrap">Unit</Typography.Title>
-                            </td>
-                            <td>
-                                <Typography.Title level={5} className="font-['Quicksand'] font-bold !text-[#001489] !text-[16px] !mt-0  !mb-0  text-nowrap">CO<sub>2</sub>e/Unit</Typography.Title>
-                            </td>
-                            <td>
-                                <Typography.Title level={5} className=" font-['Quicksand'] font-bold !text-[#001489] !text-[16px] !mt-0  !mb-0  text-nowrap">Volume</Typography.Title>
-                            </td>
-                            <td>
-                                <Typography.Title level={5} className="font-['Quicksand'] font-bold !text-[#001489] !text-[16   px] !mt-0  !mb-0  text-nowrap">Cost/Unit</Typography.Title>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div className="flex flex-row">
-                                    <Select
-                                    style={{ width: 100 }}
-                                    suffixIcon={null}
-                                    placeholder={"Sub category"}
-                                    options={[
-                                        { value: 'Machinery', label: 'Machinery' },
-                                        { value: 'Tools', label: 'Tools' },
-                                        { value: 'Ship', label: 'Ship' },
-                                    ]}
-                                    className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px_0px_0px_4px] min-w-[100px] max-w-[100px]"/> 
-                                    <div className="flex justify-center items-center w-[33px] h-[36px] border-[1px] border-[#363A4F] border-l-[0px] rounded-[0px_4px_4px_0px]">
-                                        <img src={DropdownIcon} className="w-[12px] h-[6px]" />
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                            <div className="flex flex-row">
-                                    <Select
-                                    style={{ width: 100 }}
-                                    suffixIcon={null}
-                                    placeholder={"Name"}
-                                    options={[
-                                        { value: 'Machinery', label: 'Machinery' },
-                                        { value: 'Tools', label: 'Tools' },
-                                        { value: 'Ship', label: 'Ship' },
-                                    ]}
-                                    className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px_0px_0px_4px] min-w-[100px] max-w-[100px]"/> 
-                                    <div className="flex justify-center items-center w-[33px] h-[36px] border-[1px] border-[#363A4F] border-l-[0px] rounded-[0px_4px_4px_0px]">
-                                        <img src={DropdownIcon} className="w-[12px] h-[6px]" />
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                            <div className="flex flex-row">
-                                    <Select
-                                    style={{ width: 65 }}
-                                    suffixIcon={null}
-                                    placeholder={"Unit"}
-                                options={[
-                                        { value: 'kg', label: 'kg' },
-                                        { value: 'kg', label: 'kg' },
-                                    
-                                    ]}
-                                    className="custom-select bg-[#FEFEFE] h-[36px] border-[1px]   border-[#363A4F] rounded-[4px_0px_0px_4px] min-w-[65px] max-w-[65px]"/>
-                                    <div className="flex justify-center items-center w-[33px] h-[36px] border-[1px] border-[#363A4F] border-l-[0px] rounded-[0px_4px_4px_0px]">
-                                        <img src={DropdownIcon} className="w-[12px] h-[6px]" />
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <Input  className="custom-select bg-[#FEFEFE] w-[93px] h-[36px]   border-[1px] border-[#363A4F] rounded-[4px]" placeholder="2" /> 
-                            </td>
-                            <td>
-                                <Input  className="custom-select bg-[#FEFEFE] w-[93px] h-[36px]   border-[1px] border-[#363A4F] rounded-[4px]" placeholder="232" /> 
-                            </td>
-                            <td>
-                                <Input  className="custom-select bg-[#FEFEFE] w-[93px] h-[36px]   border-[1px] border-[#363A4F] rounded-[4px]" placeholder="4" /> 
-                            </td>
-
-                            <td>
-                            <div className="border-[1px] border-[#B8BFEA] w-[36px] h-[36px] rounded-[4px] flex justify-center items-center cursor-pointer">
-                    
-                    <img  src={AddIcon} className="" />
-                   
-                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                
                 {/* <div className="flex flex-col">
                     <div className="flex flex-row">
                         <Typography.Title level={5} className="w-[175px] font-['Quicksand'] font-bold !text-[#001489] !text-[18px] !mt-0  !mb-0 ml-2 text-nowrap">Sub Category</Typography.Title>

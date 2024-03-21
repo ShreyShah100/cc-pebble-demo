@@ -144,32 +144,33 @@ function renderBusinessFacilityTab(){
 
 }
 
-  const EnergyConsuption: React.FC = () => (
-    
-    <Layout className="fixed-box w-full h-full min-w-[829px] max-w-[830px] max-h-[471px] overflow-y-scroll min-h-[471px] mt-5 bg-[#FEFEFE] rounded-[4px] shadow-[0px_0px_4px_0px_#00000040]">
+  function EnergyConsuption() {
+    return(
+        <Layout className="fixed-box w-full h-full min-w-[829px] max-w-[830px] max-h-[471px] overflow-y-scroll min-h-[471px] mt-5 bg-[#FEFEFE] rounded-[4px] shadow-[0px_0px_4px_0px_#00000040]">
 
-      <Tabs
-            onChange={onChange}
-            type="card">
-            {/* Each TabPane with custom tab style */}
-            <Tabs.TabPane tab={<span className="custom-tab">
-              <div className="flex flex-row">
-                  <img src={BusinnesIcon}/>
-                  <Typography.Title level={5} className="font-['Quicksand'] font-bold !text-[20px] !mb-0 ml-1 !text-[#001489] ">Business Facility Energy </Typography.Title>
-              </div>
-            </span>} key="1">
-                {renderBusinessFacilityTab()}
-            </Tabs.TabPane>
-            <Tabs.TabPane tab={<span className="custom-tab">
+        <Tabs
+              onChange={onChange}
+              type="card">
+              {/* Each TabPane with custom tab style */}
+              <Tabs.TabPane tab={<span className="custom-tab">
                 <div className="flex flex-row">
-                  <img src={WorkFromHomeIcon}/>
-                  <Typography.Title level={5} className="font-['Quicksand'] !text-[20px] font-bold !mb-0 ml-1  !text-[#001489] "> Work from Home Energy </Typography.Title>
+                    <img src={BusinnesIcon}/>
+                    <Typography.Title level={5} className="font-['Quicksand'] font-bold !text-[20px] !mb-0 ml-1 !text-[#001489] ">Business Facility Energy </Typography.Title>
                 </div>
-              </span>} key="2">
-              {renderBusinessFacilityTab()}
-            </Tabs.TabPane>
-          </Tabs>
-    </Layout>
-  );
+              </span>} key="1">
+                  {renderBusinessFacilityTab()}
+              </Tabs.TabPane>
+              <Tabs.TabPane tab={<span className="custom-tab">
+                  <div className="flex flex-row">
+                    <img src={WorkFromHomeIcon}/>
+                    <Typography.Title level={5} className="font-['Quicksand'] !text-[20px] font-bold !mb-0 ml-1  !text-[#001489] "> Work from Home Energy </Typography.Title>
+                  </div>
+                </span>} key="2">
+                {renderBusinessFacilityTab()}
+              </Tabs.TabPane>
+            </Tabs>
+        </Layout>
+    )
+  }
   
   export default EnergyConsuption;
