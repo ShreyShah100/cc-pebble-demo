@@ -1,6 +1,6 @@
 import { Layout, Select, Typography, InputNumber, Input, Checkbox } from "antd";
 import React, { ChangeEvent, Dispatch, SetStateAction } from "react";
-import DropdownIcon from "../assets/dropdown.svg";
+
 import AddIcon from "../assets/Add.svg";
 
 const CustomForm = (props: CustomFormProps) => {
@@ -66,9 +66,9 @@ const CustomForm = (props: CustomFormProps) => {
             <div>
                 <Typography.Title level={5} className="font-['Quicksand'] font-bold !text-[#001489] !text-[18px] !mt-0">Car Petrol</Typography.Title>
                 <div className="flex flex-row justify-between">
-                    <div className="flex flex-row">
+                    <div className="flex flex-row bg-[#FFFFFF] ">
                         <Select
-                            style={{ width: 120 }}
+                            style={{ width: 120, backgroundColor:'#ffffff' }}
                             onChange={(value) => setPetrolInputData({ ...petrolInputData, ...{ type: value } })}
                             suffixIcon={null}
                             placeholder={"Car Type"}
@@ -78,12 +78,10 @@ const CustomForm = (props: CustomFormProps) => {
                                 { value: 'medium-car', label: 'Medium Car' },
                                 { value: 'large-car', label: 'Large Car' },
                             ]}
-                            className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px_0px_0px_4px] min-w-[218px] max-w-[218px]"
+                            className="custom-select h-[36px] border-[1px] border-[#363A4F] bg-[#FFFFFF] rounded-[4px] min-w-[251px] max-w-[251px]"
 
                         />
-                        <div className="flex justify-center items-center w-[33px] h-[36px] border-[1px] border-[#363A4F] border-l-[0px] rounded-[0px_4px_4px_0px]">
-                            <img src={DropdownIcon} className="w-[12px] h-[6px]" />
-                        </div>
+                       
                     </div>
                     <InputNumber onChange={(value: number | null) => setPetrolInputData({ ...petrolInputData, num1: value })} value={petrolInputData.num1} className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[164px] max-w-[164px]" placeholder="miles/Km/litres" />
                     <div className="flex flex-row">
@@ -98,19 +96,18 @@ const CustomForm = (props: CustomFormProps) => {
                                 { value: 'km', label: 'Km' },
                                 { value: 'ltr', label: 'Litres' },
                             ]}
-                            className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px_0px_0px_4px] min-w-[123px] max-w-[123px]"
+                            className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[123px] max-w-[123px]"
 
                         />
-                        <div className="flex justify-center items-center w-[33px] h-[36px] border-[1px] border-[#363A4F] border-l-[0px] rounded-[0px_4px_4px_0px]">
-                            <img src={DropdownIcon} className="w-[12px] h-[6px]" />
-                        </div>
+                       
                     </div>
                     <InputNumber onChange={(value: number | null) => setPetrolInputData({ ...petrolInputData, num2: value })} value={petrolInputData.num2} className="custom-select w-[134px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px]" placeholder="miles/Km/litres" />
-                    <div className="border-[1px] border-[#B8BFEA] w-[36px] h-[36px] rounded-[4px] flex justify-center items-center cursor-pointer">
+                    <div className="border-[1px] border-[#B8BFEA] w-[36px] h-[36px] rounded-[4px] flex justify-center items-center cursor-pointer" 
+                    onClick={() => setCarPetrol((prev) => {
+                        return [...prev, petrolInputData]
+                    })}>
                     
-                        <img onClick={() => setCarPetrol((prev) => {
-                            return [...prev, petrolInputData]
-                        })} src={AddIcon} className="" />
+                        <img  src={AddIcon} className="" />
                        
                     </div>
                 </div>
@@ -146,7 +143,7 @@ const CustomForm = (props: CustomFormProps) => {
                                                     { value: 'medium-car', label: 'Medium Car' },
                                                     { value: 'large-car', label: 'Large Car' },
                                                 ]}
-                                                className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[218px] max-w-[218px]"
+                                                className="custom-select h-[36px] border-[1px] border-[#d9d9d9] rounded-[4px] min-w-[218px] max-w-[218px]"
 
                                             />
                                         </div>
@@ -163,7 +160,7 @@ const CustomForm = (props: CustomFormProps) => {
                                                     { value: 'km', label: 'Km' },
                                                     { value: 'ltr', label: 'Litres' },
                                                 ]}
-                                                className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[123px] max-w-[123px]"
+                                                className="custom-select h-[36px] border-[1px] border-[#d9d9d9] rounded-[4px] min-w-[123px] max-w-[123px]"
 
                                             />
                                         </div>
@@ -199,12 +196,10 @@ const CustomForm = (props: CustomFormProps) => {
                                 { value: 'medium-car', label: 'Medium Car' },
                                 { value: 'large-car', label: 'Large Car' },
                             ]}
-                            className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px_0px_0px_4px] min-w-[218px] max-w-[218px]"
+                            className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[251px] max-w-[251px]"
 
                         />
-                        <div className="flex justify-center items-center w-[33px] h-[36px] border-[1px] border-[#363A4F] border-l-[0px] rounded-[0px_4px_4px_0px]">
-                            <img src={DropdownIcon} className="w-[12px] h-[6px]" />
-                        </div>
+                        
                     </div>
                     <InputNumber onChange={(value: number | null) => setDieselInputData({ ...dieselInputData, num1: value })} value={dieselInputData.num1} className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[164px] max-w-[164px]" placeholder="miles/Km/litres" />
                     <div className="flex flex-row">
@@ -219,18 +214,16 @@ const CustomForm = (props: CustomFormProps) => {
                                 { value: 'km', label: 'Km' },
                                 { value: 'ltr', label: 'Litres' },
                             ]}
-                            className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px_0px_0px_4px] min-w-[123px] max-w-[123px]"
+                            className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[123px] max-w-[123px]"
 
                         />
-                        <div className="flex justify-center items-center w-[33px] h-[36px] border-[1px] border-[#363A4F] border-l-[0px] rounded-[0px_4px_4px_0px]">
-                            <img src={DropdownIcon} className="w-[12px] h-[6px]" />
-                        </div>
+                      
                     </div>
                     <InputNumber onChange={(value: number | null) => setDieselInputData({ ...dieselInputData, num2: value })} value={dieselInputData.num2} className="custom-select w-[134px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px]" placeholder="miles/Km/litres" />
-                    <div className="border-[1px] border-[#B8BFEA] w-[36px] h-[36px] rounded-[4px] flex justify-center items-center cursor-pointer">
-                        <img onClick={() => setCarDiesel((prev) => {
+                    <div className="border-[1px] border-[#B8BFEA] w-[36px] h-[36px] rounded-[4px] flex justify-center items-center cursor-pointer" onClick={() => setCarDiesel((prev) => {
                             return [...prev, dieselInputData]
-                        })} src={AddIcon} className="" />
+                        })}>
+                        <img  src={AddIcon} className="" />
                     </div>
                 </div>
                 <div className="flex flex-row justify-start mt-3">
@@ -265,11 +258,11 @@ const CustomForm = (props: CustomFormProps) => {
                                                     { value: 'medium-car', label: 'Medium Car' },
                                                     { value: 'large-car', label: 'Large Car' },
                                                 ]}
-                                                className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[218px] max-w-[218px]"
+                                                className="custom-select h-[36px] border-[1px] border-[#d9d9d9] rounded-[4px] min-w-[218px] max-w-[218px]"
 
                                             />
                                         </div>
-                                        <InputNumber disabled={true} value={value.num1} className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[164px] max-w-[164px]" placeholder="miles/Km/litres" />
+                                        <InputNumber disabled={true} value={value.num1} className="custom-select h-[36px] border-[1px] border-[#d9d9d9] rounded-[4px] min-w-[164px] max-w-[164px]" placeholder="miles/Km/litres" />
                                         <div className="flex flex-row">
                                             <Select
                                                 disabled={true}
@@ -318,12 +311,10 @@ const CustomForm = (props: CustomFormProps) => {
                                 { value: 'medium-car', label: 'Medium Car' },
                                 { value: 'large-car', label: 'Large Car' },
                             ]}
-                            className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px_0px_0px_4px] min-w-[218px] max-w-[218px]"
+                            className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[251px] max-w-[251px]"
 
                         />
-                        <div className="flex justify-center items-center w-[33px] h-[36px] border-[1px] border-[#363A4F] border-l-[0px] rounded-[0px_4px_4px_0px]">
-                            <img src={DropdownIcon} className="w-[12px] h-[6px]" />
-                        </div>
+                       
                     </div>
                     <InputNumber onChange={(value: number | null) => setAverageInputData({ ...averageInputData, num1: value })} value={averageInputData.num1} className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[164px] max-w-[164px]" placeholder="miles/Km/litres" />
                     <div className="flex flex-row">
@@ -341,15 +332,13 @@ const CustomForm = (props: CustomFormProps) => {
                             className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px_0px_0px_4px] min-w-[123px] max-w-[123px]"
 
                         />
-                        <div className="flex justify-center items-center w-[33px] h-[36px] border-[1px] border-[#363A4F] border-l-[0px] rounded-[0px_4px_4px_0px]">
-                            <img src={DropdownIcon} className="w-[12px] h-[6px]" />
-                        </div>
+                      
                     </div>
                     <InputNumber onChange={(value: number | null) => setAverageInputData({ ...averageInputData, num2: value })} value={averageInputData.num2} className="custom-select w-[134px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px]" placeholder="miles/Km/litres" />
-                    <div className="border-[1px] border-[#B8BFEA] w-[36px] h-[36px] rounded-[4px] flex justify-center items-center cursor-pointer">
-                        <img onClick={() => setCarAverage((prev) => {
+                    <div className="border-[1px] border-[#B8BFEA] w-[36px] h-[36px] rounded-[4px] flex justify-center items-center cursor-pointer" onClick={() => setCarAverage((prev) => {
                             return [...prev, averageInputData]
-                        })} src={AddIcon} className="" />
+                        })} >
+                        <img src={AddIcon} className="" />
                     </div>
                 </div>
                 <div className="flex flex-row justify-start mt-3">
@@ -384,11 +373,11 @@ const CustomForm = (props: CustomFormProps) => {
                                                     { value: 'medium-car', label: 'Medium Car' },
                                                     { value: 'large-car', label: 'Large Car' },
                                                 ]}
-                                                className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[218px] max-w-[218px]"
+                                                className="custom-select h-[36px] border-[1px] border-[#d9d9d9] rounded-[4px] min-w-[218px] max-w-[218px]"
 
                                             />
                                         </div>
-                                        <InputNumber disabled={true} value={value.num1} className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[164px] max-w-[164px]" placeholder="miles/Km/litres" />
+                                        <InputNumber disabled={true} value={value.num1} className="custom-select h-[36px] border-[1px] border-[#d9d9d9] rounded-[4px] min-w-[164px] max-w-[164px]" placeholder="miles/Km/litres" />
                                         <div className="flex flex-row">
                                             <Select
                                                 disabled={true}
@@ -401,7 +390,7 @@ const CustomForm = (props: CustomFormProps) => {
                                                     { value: 'km', label: 'Km' },
                                                     { value: 'ltr', label: 'Litres' },
                                                 ]}
-                                                className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[123px] max-w-[123px]"
+                                                className="custom-select h-[36px] border-[1px] border-[#d9d9d9] rounded-[4px] min-w-[123px] max-w-[123px]"
 
                                             />
                                         </div>
@@ -437,12 +426,10 @@ const CustomForm = (props: CustomFormProps) => {
                                 { value: 'medium-car', label: 'Medium Car' },
                                 { value: 'large-car', label: 'Large Car' },
                             ]}
-                            className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px_0px_0px_4px] min-w-[218px] max-w-[218px]"
+                            className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[251px] max-w-[251px]"
 
                         />
-                        <div className="flex justify-center items-center w-[33px] h-[36px] border-[1px] border-[#363A4F] border-l-[0px] rounded-[0px_4px_4px_0px]">
-                            <img src={DropdownIcon} className="w-[12px] h-[6px]" />
-                        </div>
+                       
                     </div>
                     <InputNumber onChange={(value: number | null) => setHybridInputData({ ...hybridInputData, num1: value })} value={hybridInputData.num1} className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[164px] max-w-[164px]" placeholder="miles/Km/litres" />
                     <div className="flex flex-row">
@@ -457,18 +444,16 @@ const CustomForm = (props: CustomFormProps) => {
                                 { value: 'km', label: 'Km' },
                                 { value: 'ltr', label: 'Litres' },
                             ]}
-                            className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px_0px_0px_4px] min-w-[123px] max-w-[123px]"
+                            className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[123px] max-w-[123px]"
 
                         />
-                        <div className="flex justify-center items-center w-[33px] h-[36px] border-[1px] border-[#363A4F] border-l-[0px] rounded-[0px_4px_4px_0px]">
-                            <img src={DropdownIcon} className="w-[12px] h-[6px]" />
-                        </div>
+                        
                     </div>
                     <InputNumber onChange={(value: number | null) => setHybridInputData({ ...hybridInputData, num2: value })} value={hybridInputData.num2} className="custom-select w-[134px] h-[36px] border-[1px] border-[#363A4F] rounded-[4px]" placeholder="miles/Km/litres" />
-                    <div className="border-[1px] border-[#B8BFEA] w-[36px] h-[36px] rounded-[4px] flex justify-center items-center cursor-pointer">
-                        <img onClick={() => setCarHybrid((prev) => {
+                    <div  className="border-[1px] border-[#B8BFEA] w-[36px] h-[36px] rounded-[4px] flex justify-center items-center cursor-pointer" onClick={() => setCarHybrid((prev) => {
                             return [...prev, hybridInputData]
-                        })} src={AddIcon} className="" />
+                        })}>
+                        <img  src={AddIcon} className="" />
                     </div>
                 </div>
                 <div className="flex flex-row justify-start mt-3">
@@ -503,11 +488,11 @@ const CustomForm = (props: CustomFormProps) => {
                                                     { value: 'medium-car', label: 'Medium Car' },
                                                     { value: 'large-car', label: 'Large Car' },
                                                 ]}
-                                                className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[218px] max-w-[218px]"
+                                                className="custom-select h-[36px] border-[1px] border-[#d9d9d9] rounded-[4px] min-w-[218px] max-w-[218px]"
 
                                             />
                                         </div>
-                                        <InputNumber disabled={true} value={value.num1} className="custom-select h-[36px] border-[1px] border-[#363A4F] rounded-[4px] min-w-[164px] max-w-[164px]" placeholder="miles/Km/litres" />
+                                        <InputNumber disabled={true} value={value.num1} className="custom-select h-[36px] border-[1px] border-[#d9d9d9] rounded-[4px] min-w-[164px] max-w-[164px]" placeholder="miles/Km/litres" />
                                         <div className="flex flex-row">
                                             <Select
                                                 disabled={true}
